@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build:amd": "rollup src/main.js -f amd -o ./dist/dist.amd.js",
+    "build:cjs": "rollup src/main.js -f cjs -o ./dist/dist.cjs.js",
+    "build:es": "rollup src/main.js -f es -o ./dist/dist.es.js",
+    "build:iife": "rollup src/main.js -f iife -n result -o ./dist/dist.iife.js",
+    "build:umd": "rollup src/main.js -f umd -n result -o ./dist/dist.umd.js",
+    "build:all": "npm run build:amd && npm run build:cjs && npm run build:es && npm run build:iife && npm run build:umd",
+    "build:amdid": "rollup src/main.js -f amd -o ./dist/dist.amd.id.js --id my"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "lodash": "^4.17.11",
+    "rollup": "^1.12.1",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "the-answer": "^1.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
